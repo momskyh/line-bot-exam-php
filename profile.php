@@ -20,9 +20,9 @@ echo $result['displayName'];
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 $response = $bot->getProfile($userId);
-if ($response->isSucceeded()) {
-    $profile = $response->getJSONDecodedBody();
-    echo $profile['displayName'];
-    echo $profile['pictureUrl'];
-    echo $profile['statusMessage'];
-}
+//if ($response->isSucceeded()) {
+$profile = $response->getJSONDecodedBody();
+echo $profile['displayName'];
+echo $profile['pictureUrl'];
+echo $profile['statusMessage'];
+//}
