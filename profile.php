@@ -15,14 +15,9 @@ curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 $result = curl_exec($ch);
 curl_close($ch);
 echo $result;
+echo $result['userId'];
 echo $result['displayName'];
+echo $result[1];
 
-$httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
-$bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
-$response = $bot->getProfile($userId);
-//if ($response->isSucceeded()) {
-$profile = $response->getJSONDecodedBody();
-echo $profile['displayName'];
-echo $profile['pictureUrl'];
-echo $profile['statusMessage'];
-//}
+
+?>
