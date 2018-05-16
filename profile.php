@@ -17,5 +17,3 @@ curl_close($ch);
 echo $result['userId'];
 echo $result['displayName'];
 echo $result[1:10];
-
-?>
